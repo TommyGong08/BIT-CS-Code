@@ -1,4 +1,12 @@
-### BIT-CS-Code  
-record Code for BIT-CS courses  
-记录BIT计科课程的部分代码   
-README.md待完善  
+BIT-CS-Code
+==  
+记录BIT课程资料和代码 
+##目录
+
+### 大三上
+1. 操作系统课程设计OSD
+2. 数字图像处理
+
+### 大三下
+1. 编译原理与设计实验
+ 
