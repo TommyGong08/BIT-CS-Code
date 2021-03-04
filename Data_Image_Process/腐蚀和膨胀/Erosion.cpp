@@ -7,9 +7,9 @@ int main()
 {
     int height , width = 0;
     int height_B,width_B = 0;
-    //ÊäÈëÍ¼ÏñµÄ³¤¿í
+    //ï¿½ï¿½ï¿½ï¿½Í¼ï¿½ï¿½Ä³ï¿½ï¿½ï¿½
     cin >> height >> width;
-    //ÊäÈë½á¹¹»¯ÔªËØµÄ³¤¿í(Ö»¿ÉÄÜÎªÆæÊý)
+    //ï¿½ï¿½ï¿½ï¿½á¹¹ï¿½ï¿½Ôªï¿½ØµÄ³ï¿½ï¿½ï¿½(Ö»ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½)
     cin >> height_B >> width_B;
     int src[100][100] = {0};
     int temp_src[100][100] = {0};
@@ -28,13 +28,11 @@ int main()
         for(int j = width_B/2 ;j < width - width_B/2 ;j++)
         {
             flag = 1;
-            //3*3µÄ½á¹¹
+            //3*3ï¿½Ä½á¹¹
             for(int m = i - height_B/2 ;m < i + height_B/2 + 1 ; m++)
             {
                 for(int n = j - width_B/2; n < j + width_B/2 + 1 ; n++)
                 {
-                    //×ÔÉí¼°ÁìÓòÖÐÈôÓÐÒ»¸öÎª0
-                    //Ôò½«¸ÃµãÉèÎª0
                     if(temp_src[i][j] == 0 || temp_src[m][n] == 0)
                     {
                         flag = 0;
