@@ -1,6 +1,7 @@
 grammer myCpp;
 
-expression: assignmentExpression
+expression
+        :   assignmentExpression
         |   expression ',' assignmentExpression
         ;
 
@@ -129,7 +130,7 @@ statement
         |   jumpStatement
         ;
 
-labeledSatement
+labeledStatement
         :   Identifier ':' statement
         |   'case' constantExpression ':' statement
         |   'default' ':' statement
