@@ -24,7 +24,9 @@ def receive(sock, filename):
         print("收到数据data", packet)
         if not pkt:
             break
-        seq_num, data = packet.extract(pkt)
+        seq_num, data = packet.extract(pkt, True)
+        if data == '':
+            continue
         print('Got packet', seq_num)
         
         # Send back an ACK

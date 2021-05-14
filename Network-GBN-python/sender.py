@@ -49,7 +49,8 @@ def send(sock, filename):
         # print(data)
         if not data:
             break
-        packets.append(packet.make(seq_num, data))
+
+        packets.append(packet.make(seq_num, data, is_checksum=True))
         seq_num += 1
 
     num_packets = len(packets)
@@ -112,7 +113,7 @@ def receive(sock):
 
     while True:
         pack, addr = sock.recvfrom(1024)
-        ack, address2 = packet.extract(pack)
+        ack, address2 = packet.extract(pack, False)
 
         # If we get an ACK for the first in-flight packet
         print('Got ACK', ack)
